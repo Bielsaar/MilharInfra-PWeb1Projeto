@@ -16,7 +16,8 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatMenuModule} from "@angular/material/menu";
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
-import { ProdutosListarComponent } from './components/produtos-listar/produtos-listar.component';
+import { ProdutosListarComponent } from './produtos/produtos-listar/produtos-listar.component';
+import {ProdutosModule} from "./produtos/produtos.module";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,6 @@ import { ProdutosListarComponent } from './components/produtos-listar/produtos-l
     FooterComponent,
     BaseComponent,
     HeaderComponent,
-    ProdutosListarComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +38,8 @@ import { ProdutosListarComponent } from './components/produtos-listar/produtos-l
     MatToolbarModule,
     MatMenuModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ProdutosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
