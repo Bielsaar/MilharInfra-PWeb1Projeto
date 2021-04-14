@@ -8,7 +8,6 @@
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: auto auto;
-  position: absolute;
   justify-content: center;
   align-items: center;
   height: auto;
@@ -16,6 +15,7 @@
   border: 1px hidden gray;
   background-color: rgba(142,142,145,0.8);
   border-radius: 2%;
+  margin: 1.5rem 0px;
 }
 
 mat-card{
