@@ -14,13 +14,17 @@ import { BaseComponent } from './components/base/base.component';
 import {HeaderComponent} from "./components/header/header.component";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatMenuModule} from "@angular/material/menu";
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import { ProdutosListarComponent } from './components/produtos-listar/produtos-listar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     BaseComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProdutosListarComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,9 @@ import {MatMenuModule} from "@angular/material/menu";
     MatCardModule,
     MatIconModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,100 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Gabriela",
+      "sobrenome": "Santos da Silva",
+      "nascimento": "13/04/1998",
+      "telefone": "83991231234",
+      "sexo": "m",
+      "cep": "58000000"
+    },
+    {
+      "id": 2,
+      "nome": "Nadine",
+      "sobrenome": "Costacorta",
+      "nascimento": "01/02/1997",
+      "telefone": "83991478478",
+      "sexo": "f",
+      "cep": "58000000"
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Pamonha Tradicional",
+      "preco": 4,
+      "quantidade": 50,
+      "link": "",
+      "descricaoSimples": "Pamonha quentinha!",
+      "descricaoCompleta": "Pamonha tradicional, feita com milho de qualidade, de forma artesanal e com carinho!"
+    },
+    {
+      "id": 2,
+      "nome": "Pamonha com Queijo",
+      "preco": 5,
+      "quantidade": 50,
+      "link": "",
+      "descricaoSimples": "Pamonha quentinha e com queijo coalho!",
+      "descricaoCompleta": "Pamonha com queijo, feita com milho e queijo coalho de qualidade, ambos de forma artesanal e com carinho!"
+    },
+    {
+      "id": 3,
+      "nome": "Pamonha Doce",
+      "preco": 5,
+      "quantidade": 50,
+      "link": "",
+      "descricaoSimples": "Pamonha quentinha e docinha!",
+      "descricaoCompleta": "Pamonha docinha, feita com milho e açucar branco, de forma artesanal e com amor!"
+    },
+    {
+      "id": 4,
+      "nome": "Escondidinho de Pamonha com linguiça",
+      "preco": 20,
+      "quantidade": 30,
+      "link": "",
+      "descricaoSimples": "Escondidinho de pamonha, com linguiça artesanal!",
+      "descricaoCompleta": "Escondidinho de pamonha cremosa recheada com linguiça calabresa defumada caseira, ambos feitos artesanalmente!"
+    },
+    {
+      "id": 5,
+      "nome": "Pamonha Recheada com Goiabada",
+      "preco": 10,
+      "quantidade": 40,
+      "link": "",
+      "descricaoSimples": "Pamonha com Goiabada de primeira qualidade!",
+      "descricaoCompleta": "Pamonha docinha de travessa, recheada com goiabada caseira, e feita com milho e açucar branco, de forma artesanal e com amor!"
+    },
+    {
+      "id": 6,
+      "nome": "Bolo de Pamonha",
+      "preco": 15,
+      "quantidade": 20,
+      "link": "",
+      "descricaoSimples": "Bolo de pamonha fofinho!",
+      "descricaoCompleta": "Bolo fofinho, feito com uma tecnica similar ao de fazer pamonha, uma delicia!"
+    },
+    {
+      "id": 7,
+      "nome": "Bolinho de Pamonha Recheado",
+      "preco": 6,
+      "quantidade": 50,
+      "link": "",
+      "descricaoSimples": "Bolinho de pamonha fofinho com recheio!",
+      "descricaoCompleta": "Bolinho fofinho, com um recheio cremoso feito de milho, uma delicia!"
+    }
+  ],
+  "pedidos": [
+    {
+      "id": "1",
+      "produtos": [
+        1,
+        1,
+        3
+      ],
+      "precoTotal": 13,
+      "usuario": 2,
+      "comentario": ""
+    }
+  ]
+}
