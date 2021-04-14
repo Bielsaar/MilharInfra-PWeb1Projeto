@@ -29,7 +29,7 @@
       "nome": "Pamonha Tradicional",
       "preco": 4.0,
       "quantidade": 50,
-      "imagem": "",
+      "imagem": "../assets/produtos/pamonha-tradicional.jpg",
       "descricaoSimples": "Pamonha quentinha!",
       "descricaoCompleta": "Pamonha tradicional, feita com milho de qualidade, de forma artesanal e com carinho!"
     },
@@ -38,7 +38,7 @@
       "nome": "Pamonha com Queijo",
       "preco": 5.0,
       "quantidade": 50,
-      "imagem": "",
+      "imagem": "../assets/produtos/pamonha-tradicional.jpg",
       "descricaoSimples": "Pamonha quentinha e com queijo coalho!",
       "descricaoCompleta": "Pamonha com queijo, feita com milho e queijo coalho de qualidade, ambos de forma artesanal e com carinho!"
     },
@@ -47,7 +47,7 @@
       "nome": "Pamonha Doce",
       "preco": 5.0,
       "quantidade": 50,
-      "imagem": "",
+      "imagem": "../assets/produtos/pamonha-tradicional.jpg",
       "descricaoSimples": "Pamonha quentinha e docinha!",
       "descricaoCompleta": "Pamonha docinha, feita com milho e açucar branco, de forma artesanal e com amor!"
     },
@@ -56,7 +56,7 @@
       "nome": "Escondidinho de Pamonha com linguiça",
       "preco": 20.0,
       "quantidade": 30,
-      "imagem": "",
+      "imagem": "../assets/produtos/escondidinho-pamonha-linguica.jpg",
       "descricaoSimples": "Escondidinho de pamonha, com linguiça artesanal!",
       "descricaoCompleta": "Escondidinho de pamonha cremosa recheada com linguiça calabresa defumada caseira, ambos feitos artesanalmente!"
     },
@@ -65,7 +65,7 @@
       "nome": "Pamonha Recheada com Goiabada",
       "preco": 10.0,
       "quantidade": 40,
-      "imagem": "",
+      "imagem": "../assets/produtos/pamonha-goiabada-travessa.jpg",
       "descricaoSimples": "Pamonha com Goiabada de primeira qualidade!",
       "descricaoCompleta": "Pamonha docinha de travessa, recheada com goiabada caseira, e feita com milho e açucar branco, de forma artesanal e com amor!"
     },
@@ -74,7 +74,7 @@
       "nome": "Bolo de Pamonha",
       "preco": 15.0,
       "quantidade": 20,
-      "imagem": "",
+      "imagem": "../assets/produtos/bolo-pamonha.jpg",
       "descricaoSimples": "Bolo de pamonha fofinho!",
       "descricaoCompleta": "Bolo fofinho, feito com uma tecnica similar ao de fazer pamonha, uma delicia!"
     },
@@ -83,7 +83,7 @@
       "nome": "Bolinho de Pamonha Recheado",
       "preco": 6.0,
       "quantidade": 50,
-      "imagem": "",
+      "imagem": "../assets/produtos/bolinho-pamonha-recheado.jpg",
       "descricaoSimples": "Bolinho de pamonha fofinho com recheio!",
       "descricaoCompleta": "Bolinho fofinho, com um recheio cremoso feito de milho, uma delicia!"
     }

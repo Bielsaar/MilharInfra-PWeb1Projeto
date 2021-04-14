@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {ProdutosListarComponent} from "./produtos-listar/produtos-listar.component";
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
 
 
 
@@ -11,10 +12,11 @@ import {MatIconModule} from "@angular/material/icon";
   exports: [
     ProdutosListarComponent
   ],
-    imports: [
-        CommonModule,
-        MatCardModule,
-        MatIconModule
-    ]
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatIconModule,
+    MatButtonModule
+  ]
 })
 export class ProdutosModule { }
