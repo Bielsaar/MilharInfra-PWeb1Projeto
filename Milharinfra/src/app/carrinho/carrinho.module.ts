@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarrinhoListarComponent } from './carrinho-listar/carrinho-listar.component';
 import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
 
 
 
@@ -9,9 +10,13 @@ import {MatCardModule} from "@angular/material/card";
   declarations: [
     CarrinhoListarComponent
   ],
-  imports: [
-    CommonModule,
-    MatCardModule
-  ]
+  exports:[
+    CarrinhoListarComponent
+  ],
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatButtonModule
+    ]
 })
 export class CarrinhoModule { }

@@ -18,6 +18,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import { ProdutosListarComponent } from './produtos/produtos-listar/produtos-listar.component';
 import {ProdutosModule} from "./produtos/produtos.module";
+import {RouterModule} from "@angular/router";
+import {CarrinhoModule} from "./carrinho/carrinho.module";
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import {ProdutosModule} from "./produtos/produtos.module";
     MatMenuModule,
     HttpClientModule,
     FormsModule,
-    ProdutosModule
+    ProdutosModule,
+    CarrinhoModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,7 +10,7 @@ export class CarrinhoService {
 
   constructor(private httpClient: HttpClient) { }
 
-  URL_CARRINHO = "localhost:3000/carrinho"
+  URL_CARRINHO = "http://localhost:3000/carrinho"
 
   httpOptions = {
     headers: new HttpHeaders({

@@ -11,13 +11,13 @@
       Menu
     </button>
     <mat-menu id="menuPrincipal" #menuPrincipal="matMenu">
-      <button mat-menu-item>
+      <button id="cardapio" mat-menu-item>
         <mat-icon>restaurant_menu</mat-icon>
-        Cardapio
+        Cardapio (em produção)
       </button>
-      <button mat-menu-item>
+      <button id="contato" mat-menu-item>
         <mat-icon>contact_mail</mat-icon>
-        Contato
+        Contato (em produção)
       </button>
     </mat-menu>
 
@@ -27,15 +27,15 @@
     </mat-form-field>
 
     <!--Login-->
-    <button mat-button  [matMenuTriggerFor]="menuUsuario">
+    <button mat-button id="usuario" [matMenuTriggerFor]="menuUsuario">
       <mat-icon id="iconeUsuario">person_outline</mat-icon>
-      Usuario
+      Usuario (em produção)
     </button>
     <mat-menu #menuUsuario="matMenu">
     </mat-menu>
 
     <!--Carrinho-->
-    <button mat-button>
+    <button mat-button [routerLink]="['./carrinho']" >
       <mat-icon>shopping_cart</mat-icon>
       Carrinho
     </button>

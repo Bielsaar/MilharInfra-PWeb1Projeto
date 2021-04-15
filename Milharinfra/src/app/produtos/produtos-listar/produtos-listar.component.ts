@@ -22,7 +22,10 @@ export class ProdutosListarComponent implements OnInit {
     );
   }
 
-  adicionarAoCarrinho(id: number): void{
+  adicionarAoCarrinho(produto: Produto): void{
 
+    this.produtoService.adicionarAoCarrinho(produto).subscribe(
+      produto => console.log(produto)
+    )
   }
 }

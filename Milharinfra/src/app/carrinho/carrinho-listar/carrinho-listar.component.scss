@@ -1,0 +1,50 @@
+.corpoCarrinho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrinho {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: auto;
+  border: 1px hidden gray;
+  background-color: rgba(142,142,145,0.8);
+  border-radius: 2%;
+  margin: 1.5rem 0px;
+}
+
+mat-card{
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+mat-card mat-card-content img{
+  height: auto;
+  width: 100px;
+  border-radius: 47%;
+}
+
+mat-card mat-card-content h2 {
+  margin-top: auto;
+  margin-bottom: 15%;
+}
+
+.espacamento {
+  margin: 10px;
+  padding: 100px;
+}

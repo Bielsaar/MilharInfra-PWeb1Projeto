@@ -1,7 +1,32 @@
 <div class="corpoCarrinho">
   <div class="carrinho">
-    <mat-card class="card" *ngFor="let produto of produtos">
+    <mat-card class="card" *ngFor="let produto of produtos" id="{{produto.id}}">
+      <!--Cabeçalho-->
+      <mat-card-header>
+        <mat-card-title>{{produto.nome}}</mat-card-title>
+        <mat-card-subtitle>{{produto.descricaoSimples}}</mat-card-subtitle>
+      </mat-card-header>
 
+      <!--Conteudo-->
+      <mat-card-content>
+        <img *ngIf="produto.imagem != ''" src="{{produto.imagem}}" alt="">
+        <img *ngIf="produto.imagem == ''" src="assets/produtos/Produto-sem-Imagem.jpg" alt="">
+        <h2>Valor: R${{produto.preco}} </h2>
+      </mat-card-content>
+
+      <!--Interativos-->
+      <mat-card-actions>
+        <button mat-raised-button color="warn" (click)="implementar(this.produto)" >Remover do Carrinho (a implementar)</button>
+      </mat-card-actions>
     </mat-card>
+
   </div>
 </div>
+
+<!--<div id="produtos-corpo">-->
+<!--  <div class="cardsContainer">-->
+<!--    <mat-card class="card" *ngFor="let produto of produtos" id="{{produto.id}}">-->
+<!--      -->
+
+<!--  </div>-->
+<!--</div>-->

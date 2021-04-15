@@ -10,13 +10,13 @@
       <!--Conteudo-->
       <mat-card-content>
         <img *ngIf="produto.imagem != ''" src="{{produto.imagem}}" alt="">
-        <img *ngIf="produto.imagem == ''" src="assets/produtos/Produto-sem-Imagem.jpg">
+        <img *ngIf="produto.imagem == ''" src="assets/produtos/Produto-sem-Imagem.jpg" alt="">
         <h2>Valor: R${{produto.preco}} </h2>
       </mat-card-content>
 
       <!--Interativos-->
       <mat-card-actions>
-        <button mat-raised-button color="primary" (click)="adicionarAoCarrinho(this.produto.id)" >Adicionar ao Carrinho</button>
+        <button mat-raised-button color="primary" (click)="adicionarAoCarrinho(this.produto)" >Adicionar ao Carrinho</button>
       </mat-card-actions>
     </mat-card>
 
