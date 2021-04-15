@@ -11,6 +11,7 @@ export class ProdutoService {
   constructor(private httpClient: HttpClient) { }
 
   URL_PRODUTOS = "http://localhost:3000/produtos"
+  URL_CARRINHO = "http://localhost:3000/carrinho"
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -22,8 +23,8 @@ export class ProdutoService {
     return this.httpClient.get<Produto[]>(this.URL_PRODUTOS);
   }
 
-  create(produto: Produto): Observable<Produto> {
-    return this.httpClient.post<Produto>(this.URL_PRODUTOS, produto, this.httpOptions);
+  adicionarAoCarrinho(produto: Produto): Observable<Produto> {
+    return this.httpClient.post<Produto>(this.URL_CARRINHO, produto, this.httpOptions);
   }
 
   remover(id: number): Observable<object> {

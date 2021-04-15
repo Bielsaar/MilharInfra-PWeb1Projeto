@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Produto} from "../../shared/model/produto";
 import {ProdutoService} from "../../shared/shared/service/produtoService/produto.service";
+import {CarrinhoService} from "../../shared/shared/service/carrinhoService/carrinho.service";
 
 @Component({
   selector: 'app-produtos-listar',
@@ -11,7 +12,7 @@ export class ProdutosListarComponent implements OnInit {
 
   produtos: Array<Produto>;
 
-  constructor(private produtoService: ProdutoService) {
+  constructor(private produtoService: ProdutoService, private carrinhoService: CarrinhoService) {
 
   }
 
