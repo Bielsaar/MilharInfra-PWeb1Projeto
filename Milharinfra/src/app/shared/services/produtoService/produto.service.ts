@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Produto} from "../../model/produto";
 import {Observable} from "rxjs";
-import {Produto} from "../../../model/produto";
 
 @Injectable({
   providedIn: 'root'
 })
-export class CarrinhoService {
+export class ProdutoService {
 
   constructor(private httpClient: HttpClient) { }
 
+  URL_PRODUTOS = "http://localhost:3000/produtos"
   URL_CARRINHO = "http://localhost:3000/carrinho"
 
   httpOptions = {
@@ -19,15 +20,13 @@ export class CarrinhoService {
   }
 
   list(): Observable<Produto[]> {
-    return this.httpClient.get<Produto[]>(this.URL_CARRINHO);
+    return this.httpClient.get<Produto[]>(this.URL_PRODUTOS);
   }
 
-  adicionar(produto: Produto): Observable<Produto> {
-    return this.httpClient.post<Produto>(this.URL_CARRINHO, produto, this.httpOptions);
-  }
 
   remover(id: number): Observable<object> {
-    return this.httpClient.delete(`${this.URL_CARRINHO}/${id}`);
+    return this.httpClient.delete(`${this.URL_PRODUTOS}/${id}`);
   }
-
 }
+
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Produto} from "../../shared/model/produto";
-import {CarrinhoService} from "../../shared/shared/service/carrinhoService/carrinho.service";
+import {CarrinhoService} from "../../shared/services/carrinhoService/carrinho.service";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 
 @Component({
@@ -10,19 +11,26 @@ import {CarrinhoService} from "../../shared/shared/service/carrinhoService/carri
 })
 export class CarrinhoListarComponent implements OnInit {
 
-  produtos: Array<Produto>;
+  carrinho: Array<Produto>;
 
-  constructor(private carrinhoService: CarrinhoService) {
+  constructor(private carrinhoService: CarrinhoService, private snackbar: MatSnackBar) {
 
   }
 
   ngOnInit(): void {
     this.carrinhoService.list().subscribe(
-      produtos => this.produtos = produtos
+      produtos => this.carrinho = produtos
     );
   }
 
-  implementar(produto: Produto) {
-
+  removerDoCarrinho(produto: Produto) {
+    this.carrinhoService.removerCarrinho(produto.id).subscribe(
+      value => {
+        const indxProdutoARemover = this.carrinho.findIndex(p => p.id === produto.id);
+        if (indxProdutoARemover > -1) {
+          this.carrinho.splice(indxProdutoARemover, 1);
+        }
+      }
+    )
   }
 }

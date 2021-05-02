@@ -20,6 +20,9 @@ import { ProdutosListarComponent } from './produtos/produtos-listar/produtos-lis
 import {ProdutosModule} from "./produtos/produtos.module";
 import {RouterModule} from "@angular/router";
 import {CarrinhoModule} from "./carrinho/carrinho.module";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {InterceptorsModule} from "./interceptors/interceptors.module";
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import {CarrinhoModule} from "./carrinho/carrinho.module";
     FooterComponent,
     BaseComponent,
     HeaderComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,9 @@ import {CarrinhoModule} from "./carrinho/carrinho.module";
     FormsModule,
     ProdutosModule,
     CarrinhoModule,
-    RouterModule
+    RouterModule,
+    MatSnackBarModule,
+    InterceptorsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

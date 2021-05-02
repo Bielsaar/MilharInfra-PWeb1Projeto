@@ -6,4 +6,5 @@ export class Produto {
   imagem: string;
   descricaoSimples: string;
   descricaoCompleta: string;
+  quantCarrinho: number;
 }
