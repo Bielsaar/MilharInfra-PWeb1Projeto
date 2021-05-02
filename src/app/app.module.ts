@@ -23,6 +23,7 @@ import {CarrinhoModule} from "./carrinho/carrinho.module";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {InterceptorsModule} from "./interceptors/interceptors.module";
+import {FirestoreModule} from "./firestore/firestore.module";
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import {InterceptorsModule} from "./interceptors/interceptors.module";
     RouterModule,
     MatSnackBarModule,
     InterceptorsModule,
+    FirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

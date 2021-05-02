@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {Produto} from "../../shared/model/produto";
 import {ProdutoService} from "../../shared/services/produtoService/produto.service";
 import {CarrinhoService} from "../../shared/services/carrinhoService/carrinho.service";
-import {MatSnackBar, MatSnackBarConfig} from "@angular/material/snack-bar";
 import {MensagemService} from "../../shared/services/mensagemService/mensagem.service";
+import {ProdutoFirestoreService} from "../../shared/services/produtoFirestore/produto-firestore.service";
+import {CarrinhoFirestoreService} from "../../shared/services/carrinhoFirestore/carrinho-firestore.service";
 
 @Component({
   selector: 'app-produtos-listar',
@@ -14,7 +15,7 @@ export class ProdutosListarComponent implements OnInit {
 
   produtos: Array<Produto>;
   carrinhoAux: Array<Produto>;
-  constructor(private produtoService: ProdutoService, private carrinhoService: CarrinhoService,
+  constructor(private produtoService: ProdutoFirestoreService, private carrinhoService: CarrinhoFirestoreService,
               private mensagemService: MensagemService) {
 
   }
@@ -33,9 +34,9 @@ export class ProdutosListarComponent implements OnInit {
 
     if (verificar > -1){
       let produtoAux = this.carrinhoAux[verificar]
-      this.carrinhoService.atualizarProdutoCarrinho(produtoAux).subscribe(
+      this.carrinhoService.atualizarQuantidadeProdutoCarrinho(produtoAux).subscribe(
         value => {
-          this.carrinhoAux[verificar] = value;
+          this.carrinhoAux[verificar] = produto;
           this.mensagemService.success(`Produto "${produto.nome}" adicionado ao carrinho com sucesso!`)
           console.log("Atualizado com sucesso!", value);
         })
@@ -43,7 +44,8 @@ export class ProdutosListarComponent implements OnInit {
 
     } else {
       this.carrinhoService.adicionarAoCarrinho(produto).subscribe(
-        produto => {
+        prod => {
+          console.log(prod);
           this.mensagemService.success(`Produto "${produto.nome}" adicionado ao carrinho com sucesso!`)
           console.log("Adicionado com sucesso!", produto);
           this.carrinhoAux.push(produto)

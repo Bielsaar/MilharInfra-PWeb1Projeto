@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Produto} from "../../shared/model/produto";
 import {CarrinhoService} from "../../shared/services/carrinhoService/carrinho.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {CarrinhoFirestoreService} from "../../shared/services/carrinhoFirestore/carrinho-firestore.service";
 
 
 @Component({
@@ -13,7 +14,7 @@ export class CarrinhoListarComponent implements OnInit {
 
   carrinho: Array<Produto>;
 
-  constructor(private carrinhoService: CarrinhoService, private snackbar: MatSnackBar) {
+  constructor(private carrinhoService: CarrinhoFirestoreService, private snackbar: MatSnackBar) {
 
   }
 

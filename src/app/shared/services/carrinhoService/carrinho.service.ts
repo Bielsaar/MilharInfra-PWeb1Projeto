@@ -38,7 +38,7 @@ export class CarrinhoService {
     return this.httpClient.put<Produto>(`${this.URL_CARRINHO}/${produto.id}`, produto);
   }
 
-  removerCarrinho(id: number): Observable<object> {
+  removerCarrinho(id: string): Observable<object> {
     return this.httpClient.delete(`${this.URL_CARRINHO}/${id}`);
   }
 
