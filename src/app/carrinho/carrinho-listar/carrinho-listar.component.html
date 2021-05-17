@@ -12,7 +12,7 @@
         <img *ngIf="produto.imagem != ''" src="{{produto.imagem}}" alt="">
         <img *ngIf="produto.imagem == ''" src="assets/produtos/Produto-sem-Imagem.jpg" alt="">
         <div>
-          <h2>Valor: R${{produto.preco}} </h2>
+          <h2>Valor: R${{produto.valor}} </h2>
           <h2>Quantidade: {{produto.quantCarrinho}} </h2>
         </div>
       </mat-card-content>

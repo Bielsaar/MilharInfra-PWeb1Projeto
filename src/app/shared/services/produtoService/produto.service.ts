@@ -10,8 +10,8 @@ export class ProdutoService {
 
   constructor(private httpClient: HttpClient) { }
 
-  URL_PRODUTOS = "http://localhost:3000/produtos"
-  URL_CARRINHO = "http://localhost:3000/carrinho"
+  URL_PRODUTOS = "http://localhost:8080/produtos"
+  URL_CARRINHO = "http://localhost:8080/carrinho"
 
   httpOptions = {
     headers: new HttpHeaders({

@@ -3,6 +3,7 @@ import {Produto} from "../../shared/model/produto";
 import {CarrinhoService} from "../../shared/services/carrinhoService/carrinho.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {CarrinhoFirestoreService} from "../../shared/services/carrinhoFirestore/carrinho-firestore.service";
+import {Carrinho} from "../../shared/model/carrinho";
 
 
 @Component({
@@ -12,19 +13,19 @@ import {CarrinhoFirestoreService} from "../../shared/services/carrinhoFirestore/
 })
 export class CarrinhoListarComponent implements OnInit {
 
-  carrinho: Array<Produto>;
+  carrinho: Array<Carrinho>;
 
-  constructor(private carrinhoService: CarrinhoFirestoreService, private snackbar: MatSnackBar) {
+  constructor(private carrinhoService: CarrinhoService, private snackbar: MatSnackBar) {
 
   }
 
   ngOnInit(): void {
     this.carrinhoService.list().subscribe(
-      produtos => this.carrinho = produtos
+      carrinho => this.carrinho = carrinho
     );
   }
 
-  removerDoCarrinho(produto: Produto) {
+  removerDoCarrinho(produto: Carrinho) {
     this.carrinhoService.removerCarrinho(produto.id).subscribe(
       value => {
         const indxProdutoARemover = this.carrinho.findIndex(p => p.id === produto.id);

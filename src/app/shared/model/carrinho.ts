@@ -2,5 +2,11 @@
 import {Produto} from "./produto";
 
 export class Carrinho {
-  produto: Produto;
+  id: number;
+  nome: string;
+  valor: number;
+  imagem: string;
+  descricaoSimples: string;
+  descricaoCompleta: string;
+  quantCarrinho: number;
 }
