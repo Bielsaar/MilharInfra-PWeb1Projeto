@@ -23,16 +23,15 @@
 
     <!--Search bar-->
     <mat-form-field>
-      <input matInput placeholder="Procure o produto!">
+      <input matInput placeholder="Procure o produto!(Não implementado)">
     </mat-form-field>
 
     <!--Login-->
-    <button mat-button id="usuario" [matMenuTriggerFor]="menuUsuario">
+    <button mat-button id="usuario" [routerLink]="['./login']">
       <mat-icon id="iconeUsuario">person_outline</mat-icon>
-      Usuario (em produção)
+      Login
     </button>
-    <mat-menu #menuUsuario="matMenu">
-    </mat-menu>
+
 
     <!--Carrinho-->
     <button mat-button [routerLink]="['./carrinho']" >

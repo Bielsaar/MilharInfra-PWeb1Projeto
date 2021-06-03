@@ -16,14 +16,15 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatMenuModule} from "@angular/material/menu";
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
-import { ProdutosListarComponent } from './produtos/produtos-listar/produtos-listar.component';
-import {ProdutosModule} from "./produtos/produtos.module";
+import { ProdutosListarComponent } from './components/produtos/produtos-listar/produtos-listar.component';
+import {ProdutosModule} from "./components/produtos/produtos.module";
 import {RouterModule} from "@angular/router";
-import {CarrinhoModule} from "./carrinho/carrinho.module";
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {CarrinhoModule} from "./components/carrinho/carrinho.module";
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {InterceptorsModule} from "./interceptors/interceptors.module";
 import {FirestoreModule} from "./firestore/firestore.module";
+import { LoginComponent } from './components/login/login/login.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {FirestoreModule} from "./firestore/firestore.module";
     BaseComponent,
     HeaderComponent,
     PageNotFoundComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

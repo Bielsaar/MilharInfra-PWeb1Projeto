@@ -1,5 +1,10 @@
 <div class="corpoCarrinho">
   <div class="carrinho">
+    <mat-card class="card" *ngIf="carrinho.length < 1">
+      <mat-card-header>
+        <mat-card-title>Carrinho Vazio!</mat-card-title>
+      </mat-card-header>
+    </mat-card>
     <mat-card class="card" *ngFor="let produto of carrinho" id="{{produto.id}}">
       <!--Cabeçalho-->
       <mat-card-header>
@@ -10,7 +15,7 @@
       <!--Conteudo-->
       <mat-card-content>
         <img *ngIf="produto.imagem != ''" src="{{produto.imagem}}" alt="">
-        <img *ngIf="produto.imagem == ''" src="assets/produtos/Produto-sem-Imagem.jpg" alt="">
+        <img *ngIf="produto.imagem == ''" src="../../../../assets/produtos/Produto-sem-Imagem.jpg" alt="">
         <div>
           <h2>Valor: R${{produto.valor}} </h2>
           <h2>Quantidade: {{produto.quantCarrinho}} </h2>

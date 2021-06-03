@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {AppComponent} from "./app.component";
 import {BaseComponent} from "./components/base/base.component";
-import {CarrinhoListarComponent} from "./carrinho/carrinho-listar/carrinho-listar.component";
-import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import {CarrinhoListarComponent} from "./components/carrinho/carrinho-listar/carrinho-listar.component";
+import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
+import {LoginComponent} from "./components/login/login/login.component";
 
 const routes: Routes = [
 
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: 'carrinho',
     component: CarrinhoListarComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: '**',

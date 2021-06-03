@@ -53,7 +53,9 @@ export class CarrinhoService {
   }
 
   atualizarQuantidadeProdutoCarrinho(produtoAux: Carrinho) {
-    produtoAux.quantCarrinho++;
+    let produto = this.httpClient.get<Carrinho>(`${this.URL_CARRINHO}/${produtoAux.id}`).subscribe(e => produtoAux = e);
+    produtoAux.quantCarrinho +=1;
+    console.log(produtoAux);
     return this.httpClient.put<Carrinho>(`${this.URL_CARRINHO}/${produtoAux.id}`, produtoAux);
   }
 }
